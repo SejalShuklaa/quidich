@@ -1,0 +1,101 @@
+/* style.css */
+body, html {
+    height: 200%;
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'Arial', sans-serif; /* Use a readable font */
+}
+
+video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text-overlay {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #3D3D3D; /* Dark gray color for text */
+    height: 60vh;
+    display: none;
+    opacity: 0;
+    z-index: 20;
+    padding: 20px;
+    width: 40%;
+    max-width: 70%;
+    border-radius: 15px; /* Rounded corners for the overlay */
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    
+}
+
+.text-overlay h1, 
+.text-overlay p {
+    font-family: 'Georgia', serif; /* Beautiful serif font for headings and paragraphs */
+}
+
+.text-overlay h1 {
+    font-size: 3.5em; /* Larger font size for headings */
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    line-height: 1.2;
+    color: #ffffff; /* White color */
+    text-shadow: 0 0 10px rgba(0, 0.5, 0.5, 0.5); /* Glowing effect */
+}
+
+.text-overlay p {
+    font-size: 1.5em; /* Larger font size for paragraphs */
+    margin-bottom: 1em;
+    line-height: 1.5;
+    color: #ffffff; /* White color */
+    text-shadow: 0 0 10px rgba(0, 0.5, 0.5, 0.5); /* Glowing effect */
+}
+
+.text-overlay button {
+    padding: 0.8em 1.6em;
+    font-size: 1.1em;
+    color: #f1eded;
+    background-color: #4e342e04;  
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+    text-transform: uppercase; /* Uppercase text for button */
+    font-weight: 500;
+    border: solid 1px white;
+}
+
+/* Timeline bar styles */
+.text-overlay .timeline-bar {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    height: 5px;
+    background-color: #f8f8f8; /* Royal brown color */
+    width: 100%;
+    border-radius: 5px; /* Rounded endpoints */
+    transform: scaleX(0);
+    transform-origin: left;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+}
+
+/*overlay code*/
+/* Fullscreen overlay styles */
+.fullscreen-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(8, 8, 8, 0.644); /* Semi-transparent black */
+    z-index: 15; /* Ensure it is above the video but below text */
+    display: none; /* Hidden by default */
+}
+
